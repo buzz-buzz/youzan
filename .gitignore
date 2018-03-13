@@ -1,0 +1,12 @@
+logs/
+node_modules/
+/coverage/
+.idea/
+/run/
+.DS_Store
+*.swp
+*.js.map
+*.log
+/config/local.*
+/tmp.js
+/dist/

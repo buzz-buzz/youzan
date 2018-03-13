@@ -1,0 +1,15 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules",
+    "test",
+    "dist",
+    "coverage"
+  ],
+  "legacyWatch": true,
+  "execMap": {
+     "js": "node --harmony"
+  },
+  "ext": "js, yaml"
+}
