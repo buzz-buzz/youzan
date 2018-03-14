@@ -1,3 +1,5 @@
+const config = require('config')
+
 module.exports = {
   apps: [
     {
@@ -26,23 +28,25 @@ module.exports = {
   deploy: {
     production: {
       // user: 'root',
-      host: [
-        // { host: '' },
-      ],
+      // host: [
+      //   { host: '' },
+      // ],
       ref: 'origin/master',
       repo: 'git@github.com:buzz-buzz/youzan.git',
       path: '/var/www/youzan',
       'post-deploy': 'bash post-deploy-prod.sh',
+      ...config.get('deploy.production'),
     },
     dev: {
       // user: 'root',
-      host: [
-        // { host: '', port: '2222' },
-      ],
-      ref: 'origin/develop',
+      // host: [
+      //   { host: '', port: '22' },
+      // ],
+      ref: 'origin/master',
       repo: 'git@github.com:buzz-buzz/youzan.git',
       path: '/var/www/youzan',
       'post-deploy': 'bash post-deploy.sh',
+      ...config.get('deploy.dev'),
     },
   },
 }
