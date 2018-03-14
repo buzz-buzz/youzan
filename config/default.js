@@ -91,4 +91,10 @@ module.exports = {
       ],
     },
   },
+  notify: {
+    youzan: {
+      url: '',
+      channel: '',
+    },
+  },
 }
