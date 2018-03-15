@@ -74,9 +74,6 @@ module.exports = {
       kdt_name: '',
     },
   },
-  api: {
-    buzzService: 'http://localhost:16888',
-  },
   deploy: {
     production: {
       user: '',
