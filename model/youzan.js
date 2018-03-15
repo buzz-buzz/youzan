@@ -6,7 +6,8 @@ const ObjectId = Schema.Types.ObjectId
 module.exports = {
   schema: {
     tid: { type: String, unique: true },
-    added: Boolean,
+    added: { type: Boolean, default: false },
+    ongoing: { type: Boolean, default: true },
   },
   plugin: {},
 }
